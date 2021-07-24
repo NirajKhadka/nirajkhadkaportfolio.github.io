@@ -1,0 +1,28 @@
+@media screen and (max-width: 800px) {
+  nav .navbar-brand {
+    padding-left: 0px;
+  }
+  .home-section h1 {
+    padding-top: 220px;
+  }
+
+  #details h5 {
+    padding-top: 10px;
+    text-align: center;
+    padding-left: 0px;
+    width: 100%;
+  }
+  .about-section {
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 300px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .letters {
+    font-size: 1.5rem;
+  }
+}

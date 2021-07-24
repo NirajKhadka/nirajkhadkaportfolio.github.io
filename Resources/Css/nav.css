@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  cursor: default;
+}
+header {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+nav {
+  font-family: "Libre Franklin", sans-serif;
+  background-color: #1c2324;
+  box-shadow: 0px 1px 10px 1px rgb(52, 52, 52);
+  overflow-x: auto;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar-brand {
+  font-family: "Merriweather Sans", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
+  padding-left: 100px;
+  font-size: 1.4rem;
+  animation-name: animate_name;
+  animation-duration: 2s;
+  letter-spacing: 2px;
+  animation-timing-function: ease;
+}
+
+.letters {
+  font-family: "Playfair Display SC", serif;
+  background-color: #203237;
+  padding: 0px 2px;
+  color: #88ffcd;
+  font-size: 1.8rem;
+  text-shadow: 3px 10px 15px #000;
+  box-shadow: 2px 5px 9px 2px #000;
+}
+
+.nav-item {
+  font-family: "Vollkorn", sans-serif;
+  padding: 0px 10px;
+  animation-name: animate_navlinks;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  color: #fff;
+}
+
+.nav-link {
+  word-spacing: 2px;
+  text-shadow: 1px 2px 2px #000;
+  display: inline-block;
+  position: relative;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.nav-link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #88ffcd;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease;
+}
+
+.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@keyframes animate_name {
+  from {
+    transform: translate(-40%, -100%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes animate_navlinks {
+  from {
+    transform: translate(30%, -100%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
